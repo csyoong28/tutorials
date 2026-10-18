@@ -11,7 +11,7 @@ import static org.springframework.boot.WebApplicationType.NONE;
 public class DistributedPropertiesApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(DistributedPropertiesApplication.class).web(NONE)
+        new SpringApplicationBuilder(DistributedPropertiesApplication.class)//.web(NONE)
             .run(args);
     }
 

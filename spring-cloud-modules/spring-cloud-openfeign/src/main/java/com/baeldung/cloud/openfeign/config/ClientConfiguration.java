@@ -9,7 +9,7 @@ import feign.auth.BasicAuthRequestInterceptor;
 import feign.codec.ErrorDecoder;
 import feign.okhttp.OkHttpClient;
 
-public class ClientConfiguration {
+public class ClientConfiguration extends FeignClientsConfiguration {
 
     @Bean
     public Logger.Level feignLoggerLevel() {

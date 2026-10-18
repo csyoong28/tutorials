@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.baeldung.cloud.openfeign.model.Post;
 
-@FeignClient(name = "postClient", url = "${spring.cloud.openfeign.client.config.postClient.url}")
+@FeignClient(name = "postClient", url = "${spring.cloud.openfeign.client.config.postClient.url}",
+        configuration = ClientConfiguration.class)
 public interface PostClient {
     @GetMapping(value = "/{id}")
     Post getPostById(@PathVariable(value = "id") Integer id);

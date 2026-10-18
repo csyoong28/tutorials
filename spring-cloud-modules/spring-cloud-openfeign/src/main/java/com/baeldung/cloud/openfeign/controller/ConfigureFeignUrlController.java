@@ -1,7 +1,8 @@
 package com.baeldung.cloud.openfeign.controller;
 
 import java.net.URI;
-
+import com.baeldung.cloud.openfeign.config.ClientConfiguration;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
@@ -30,6 +31,8 @@ import feign.codec.Encoder;
 
 @RestController
 @Import(FeignClientsConfiguration.class)
+//@Import(ClientConfiguration.class)
+@Slf4j
 public class ConfigureFeignUrlController {
     private final AlbumClient albumClient;
 

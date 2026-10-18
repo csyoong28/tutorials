@@ -1,6 +1,9 @@
 spring:
   application:
     name: myApp
+  config:
+    #import: "optional:consul:"
+    import: "consul:"
   cloud:
     consul:
       host: localhost
@@ -11,7 +14,7 @@ spring:
         enabled: true
         instanceId: ${spring.application.name}:${random.value}
 server:
-  port: 0
+  port: 8080
 
 cluster:
   leader:
@@ -27,3 +30,4 @@ cluster:
       refresh: 7
     election:
       envelopeTemplate: services/%s/leader
+No newline at end of file
